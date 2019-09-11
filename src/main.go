@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	fmt.Printf("hello, world\n")
@@ -24,5 +26,7 @@ func main() {
 	// e.g. for var wanyKamo string = "fomby foana" in this case.
 	wanyKamo := "fomby foana"
 	fmt.Println("fomby ve ? " + wanyKamo)
+
+	const s string = "constant"
 
 }
