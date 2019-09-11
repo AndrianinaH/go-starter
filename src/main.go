@@ -29,12 +29,12 @@ func main() {
 
 	const s string = "constant"
 
-	i := 1
-	for i <= 3 {
-		fmt.Println(i)
-		// i = i + 1
-		i++
-	}
+	// i := 1
+	// for i <= 3 {
+	// 	fmt.Println(i)
+	// 	// i = i + 1
+	// 	i++
+	// }
 	fmt.Println("----------------")
 	for j := 7; j <= 9; j++ {
 		fmt.Println(j)
@@ -69,5 +69,33 @@ func main() {
 	} else {
 		fmt.Println(num, "has multiple digits")
 	}
+
+	fmt.Println("----------------")
+	i := 2
+	fmt.Print("Write ", i, " as ")
+	switch i {
+	case 1:
+		fmt.Println("one")
+	case 2:
+		fmt.Println("two")
+	case 3:
+		fmt.Println("three")
+	}
+
+	fmt.Println("----------------")
+	// comparer les types au lieu des valeurs
+	whatAmI := func(i interface{}) {
+		switch t := i.(type) {
+		case bool:
+			fmt.Println("I'm a bool")
+		case int:
+			fmt.Println("I'm an int")
+		default:
+			fmt.Printf("Don't know type %T\n", t)
+		}
+	}
+	whatAmI(true)
+	whatAmI(1)
+	whatAmI("hey")
 
 }
