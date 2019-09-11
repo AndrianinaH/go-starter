@@ -29,6 +29,7 @@ func main() {
 
 	const s string = "constant"
 
+	// loop
 	// i := 1
 	// for i <= 3 {
 	// 	fmt.Println(i)
@@ -51,6 +52,8 @@ func main() {
 		}
 		fmt.Println(n)
 	}
+
+	// if else
 	fmt.Println("----------------")
 	if 7%2 == 0 {
 		fmt.Println("7 is even")
@@ -70,6 +73,7 @@ func main() {
 		fmt.Println(num, "has multiple digits")
 	}
 
+	// switch case
 	fmt.Println("----------------")
 	i := 2
 	fmt.Print("Write ", i, " as ")
@@ -119,5 +123,26 @@ func main() {
 	copy(newDynamicArray, dynamicArray)
 	fmt.Println("----------------")
 	fmt.Println("newDynamicArray ", newDynamicArray)
+
+	// map (cle, valeur)
+	fmt.Println("----------------")
+	myMap := make(map[string]int)
+	myMap["k1"] = 7
+	myMap["k2"] = 13
+	fmt.Println("myMap ", myMap)
+	fmt.Println("myMap lenght ", len(myMap))
+	// access value of Map
+	v1 := myMap["k1"]
+	fmt.Println("v1: ", v1)
+
+	delete(myMap, "k2")
+	fmt.Println("myMap:", myMap)
+
+	// The optional second return value when getting a value from a map indicates if the key was present in the map. This can be used to disambiguate between missing keys and keys with zero values like 0 or "". Here we didn’t need the value itself, so we ignored it with the blank identifier _.
+	_, prs := myMap["k1"]
+	fmt.Println("prs:", prs)
+
+	newMap := map[string]int{"foo": 1, "bar": 2}
+	fmt.Println("map:", newMap)
 
 }
