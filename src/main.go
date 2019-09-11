@@ -107,8 +107,17 @@ func main() {
 	firstArray = append(firstArray, 3)
 	fmt.Println("set:", firstArray)
 
-	dynamicArray := make([]int, 4)
+	// slice
+	dynamicArray := make([]int, 1)
+	dynamicArray[0] = 40
 	dynamicArray = append(dynamicArray, 5)
-	fmt.Println(dynamicArray)
+	dynamicArray = append(dynamicArray, 45, 55)
+	fmt.Println("dynamicArray ", dynamicArray)
+	fmt.Println("lenght", len(dynamicArray))
+
+	newDynamicArray := make([]int, len(dynamicArray))
+	copy(newDynamicArray, dynamicArray)
+	fmt.Println("----------------")
+	fmt.Println("newDynamicArray ", newDynamicArray)
 
 }
