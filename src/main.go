@@ -98,4 +98,17 @@ func main() {
 	whatAmI(1)
 	whatAmI("hey")
 
+	fmt.Println("----------------")
+	// array
+	firstArray := []int{1, 2, 5}
+	fmt.Println("emp:", firstArray)
+
+	fmt.Println("----------------")
+	firstArray = append(firstArray, 3)
+	fmt.Println("set:", firstArray)
+
+	dynamicArray := make([]int, 4)
+	dynamicArray = append(dynamicArray, 5)
+	fmt.Println(dynamicArray)
+
 }
